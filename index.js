@@ -1,7 +1,11 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const token = "NDUxOTc1MzY0MTIyNTA5MzEy.DfJmYA.fXxMbEhEUO1wxO0vxGhwoXUQTpg"
+const botconfig = require("./botconfig.json");
+const Discord = require("discord.js");
 
-client.on('ready', () => {
-  client.user.setGame('Type || ^^help ', 'https://www.twitch.tv/streamerhouse%27)
-})
+const bot = new Discord.Client({disableEveryone: true})
+
+bot.on("ready", async () => {
+  console.log(`${bot.user.username} is online!`);
+  bot.user.setGame("Type || ^^help");
+});
+
+bot.login(botconfig.token);
