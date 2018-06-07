@@ -1,11 +1,8 @@
-const botconfig = require("./botconfig.json");
-const Discord = require("discord.js");
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
-const bot = new Discord.Client({disableEveryone: true})
+client.on('ready', () => {
+  client.user.setGame('tutorial ')
+})
 
-bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online!`);
-  bot.user.setGame("Type || ^^help");
-});
-
-bot.login(botconfig.token);
+client.login("NDU0MzIwMjQyOTMyNTgwMzYz.Dfrucw.K3FNwekwZ6FQn-ypPR0kz-CCA4Y");
