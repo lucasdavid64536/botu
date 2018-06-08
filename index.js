@@ -6,14 +6,14 @@ client.on('ready', () => {
 })
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'general');
+    let channel = member.guild.channels.find('name', 'welcome');
     let memberavatar = member.user.avatarURL
         if (!channel) return;
         let embed = new Discord.RichEmbed()
         .setColor('#FF000')
         .setThumbnail(memberavatar)
         .addField('✘ | Nume: ', `${member}`)
-        .addField('✘ | Bun Venit !', `Bun Venit Pe Server Sedare Placuta, ${member}`)
+        .addField('✘ | Bun Venit !', `Speram ca esti abont pe canal daca nu #anunturi , ${member}`)
         .setTimestamp()
 
         channel.sendEmbed(embed);
