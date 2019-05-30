@@ -25,7 +25,7 @@ client.on('guildMemberLeave', member => {
         .setColor('#FF0000')
         .setThumbnail(memberavatar)
         .addField('✘ | Name: ', `${member}`)
-        .addField('✘ | Hello !', `${member}`)
+        .addField('✘ | Goodbye !', `${member}`)
         .setTimestamp()
 
         channel.sendEmbed(embed);
